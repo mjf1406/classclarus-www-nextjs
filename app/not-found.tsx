@@ -1,3 +1,5 @@
+"use client";
+
 import { FooterSection } from "@/components/layout/sections/footer";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";

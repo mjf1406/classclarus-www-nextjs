@@ -1,4 +1,5 @@
 "use client";
+
 import { Menu, ArrowRight } from "lucide-react";
 import React from "react";
 import Image from "next/image";
