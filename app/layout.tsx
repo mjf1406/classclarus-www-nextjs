@@ -42,6 +42,17 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [
+      { url: "/brand/icon-removebg.svg", type: "image/svg+xml" },
+      { url: "/brand/icon-removebg.webp", type: "image/webp" },
+      { url: "/brand/icon-removebg-xs.webp", sizes: "16x16", type: "image/webp" },
+      { url: "/brand/icon-removebg-small.webp", sizes: "32x32", type: "image/webp" },
+    ],
+    apple: [
+      { url: "/brand/icon-removebg.webp", sizes: "180x180", type: "image/webp" },
+    ],
+  },
 };
 
 export default function RootLayout({

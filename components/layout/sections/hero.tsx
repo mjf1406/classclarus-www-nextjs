@@ -5,6 +5,7 @@ import { ArrowRight, Play } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
+import { WEBAPP_URL } from "@/lib/config";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
@@ -37,7 +38,7 @@ export const HeroSection = () => {
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
             <Button asChild className="w-5/6 md:w-1/4 font-bold group/arrow">
-              <Link href="https://classclarus.com">
+              <Link href={WEBAPP_URL}>
                 Get Started Free
                 <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
               </Link>

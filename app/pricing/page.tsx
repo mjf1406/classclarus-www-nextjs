@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import Link from "next/link";
+import { WEBAPP_URL } from "@/lib/config";
 
 export const metadata = {
   title: "Pricing - ClassClarus",
@@ -38,7 +39,7 @@ const plans: PlanProps[] = [
     price: 0,
     description: "Perfect for individual teachers getting started with classroom gamification.",
     buttonText: "Get Started Free",
-    href: "https://classclarus.com",
+    href: WEBAPP_URL,
     benefitList: [
       "Up to 2 classes",
       "Up to 35 students per class",
@@ -55,7 +56,7 @@ const plans: PlanProps[] = [
     price: 5,
     description: "For teachers who need more classes and enhanced features.",
     buttonText: "Start Basic",
-    href: "https://classclarus.com",
+    href: WEBAPP_URL,
     benefitList: [
       "Up to 5 classes",
       "Up to 40 students per class",
@@ -72,7 +73,7 @@ const plans: PlanProps[] = [
     price: 10,
     description: "Our most popular plan for dedicated educators.",
     buttonText: "Start Plus",
-    href: "https://classclarus.com",
+    href: WEBAPP_URL,
     benefitList: [
       "Up to 10 classes",
       "Up to 50 students per class",
@@ -89,7 +90,7 @@ const plans: PlanProps[] = [
     price: 20,
     description: "For power users and school-wide implementations.",
     buttonText: "Start Pro",
-    href: "https://classclarus.com",
+    href: WEBAPP_URL,
     benefitList: [
       "Unlimited classes",
       "Unlimited students",

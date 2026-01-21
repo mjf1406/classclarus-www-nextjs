@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
-import { GraduationCap } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const FooterSection = () => {
   return (
@@ -9,8 +9,13 @@ export const FooterSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8">
           <div className="col-span-full xl:col-span-2">
             <Link href="/" className="flex font-bold items-center">
-              <GraduationCap className="w-9 h-9 mr-2 bg-gradient-to-tr from-primary via-primary/70 to-primary rounded-lg border border-secondary p-1 text-white" />
-
+              <Image
+                src="/brand/icon-removebg.webp"
+                alt="ClassClarus"
+                width={36}
+                height={36}
+                className="mr-2"
+              />
               <h3 className="text-2xl">ClassClarus</h3>
             </Link>
             <p className="mt-4 text-muted-foreground text-sm max-w-xs">

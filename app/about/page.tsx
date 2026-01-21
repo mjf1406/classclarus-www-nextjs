@@ -1,6 +1,7 @@
 import { FooterSection } from "@/components/layout/sections/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Heart, Lightbulb, Users, Target, Sparkles } from "lucide-react";
+import { WEBAPP_URL } from "@/lib/config";
 
 export const metadata = {
   title: "About - ClassClarus",
@@ -16,7 +17,7 @@ const values = [
   {
     icon: Lightbulb,
     title: "Teacher-Designed",
-    description: "Built by educators who understand classroom realities. We know what works because we&apos;ve been there.",
+    description: "Built by educators who understand classroom realities. We know what works because we've been there.",
   },
   {
     icon: Users,
@@ -26,7 +27,7 @@ const values = [
   {
     icon: Target,
     title: "Simplicity First",
-    description: "Powerful doesn&apos;t mean complicated. We believe the best tools get out of your way and just work.",
+    description: "Powerful doesn't mean complicated. We believe the best tools get out of your way and just work.",
   },
 ];
 
@@ -143,7 +144,7 @@ export default function AboutPage() {
               Join thousands of teachers who are already using ClassClarus to motivate their students.
             </p>
             <a
-              href="https://classclarus.com"
+              href={WEBAPP_URL}
               className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
             >
               Get Started Free

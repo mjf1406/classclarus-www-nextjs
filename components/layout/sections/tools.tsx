@@ -25,7 +25,7 @@ const toolList: ToolProps[] = [
     icon: "Scale",
     title: "Equitable Assigners",
     description:
-      "Distribute assignments fairly based on past participation. Track who&apos;s done what and balance workload automatically.",
+      "Distribute assignments fairly based on past participation. Track who's done what and balance workload automatically.",
   },
   {
     icon: "Dices",
