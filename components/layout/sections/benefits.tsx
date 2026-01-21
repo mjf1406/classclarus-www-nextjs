@@ -35,7 +35,7 @@ const benefitList: BenefitsProps[] = [
     icon: "Target",
     title: "Clear Expectations",
     description:
-      "Set and display expectations so students always know what's expected. Track progress toward goals in real-time.",
+      "Set and display expectations so students always know what&apos;s expected. Track progress toward goals in real-time.",
     audience: "Students",
   },
   {

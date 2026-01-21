@@ -21,17 +21,17 @@ interface FAQProps {
 const FAQList: FAQProps[] = [
   {
     question: "What is ClassClarus?",
-    answer: "ClassClarus is a classroom gamification platform that helps teachers motivate students through points, behaviors, and rewards. Teachers can award points for positive behaviors, let students redeem points for rewards, and track progress in real-time. It's designed to make classroom management engaging and fun for both teachers and students.",
+    answer: "ClassClarus is a classroom gamification platform that helps teachers motivate students through points, behaviors, and rewards. Teachers can award points for positive behaviors, let students redeem points for rewards, and track progress in real-time. It&apos;s designed to make classroom management engaging and fun for both teachers and students.",
     value: "item-1",
   },
   {
     question: "How do points and behaviors work?",
-    answer: "Teachers create custom behaviors (like 'Helped a classmate' or 'Completed homework') and assign point values to each. When students demonstrate these behaviors, teachers award or deduct points with a single click. Points accumulate over time, and students can see their progress on their personal dashboard.",
+    answer: "Teachers create custom behaviors (like &apos;Helped a classmate&apos; or &apos;Completed homework&apos;) and assign point values to each. When students demonstrate these behaviors, teachers award or deduct points with a single click. Points accumulate over time, and students can see their progress on their personal dashboard.",
     value: "item-2",
   },
   {
     question: "What are reward items?",
-    answer: "Reward items are incentives that students can 'purchase' using their earned points. Teachers define what rewards are available (like 'Extra recess time', 'Homework pass', or 'Sit anywhere for a day') and set point costs. You can also set purchase limits to control how often students can redeem specific rewards.",
+    answer: "Reward items are incentives that students can &apos;purchase&apos; using their earned points. Teachers define what rewards are available (like &apos;Extra recess time&apos;, &apos;Homework pass&apos;, or &apos;Sit anywhere for a day&apos;) and set point costs. You can also set purchase limits to control how often students can redeem specific rewards.",
     value: "item-3",
   },
   {
@@ -46,7 +46,7 @@ const FAQList: FAQProps[] = [
   },
   {
     question: "How do students access their dashboard?",
-    answer: "Students can access their personal dashboard using a unique join code that you provide. They can view their current points, see the reward marketplace, track their expectations and goals, and review their behavior history. Students don't need an email address to join—just the class code.",
+    answer: "Students can access their personal dashboard using a unique join code that you provide. They can view their current points, see the reward marketplace, track their expectations and goals, and review their behavior history. Students don&apos;t need an email address to join—just the class code.",
     value: "item-6",
   },
   {
@@ -56,7 +56,7 @@ const FAQList: FAQProps[] = [
   },
   {
     question: "Can parents or guardians view student progress?",
-    answer: "Yes! ClassClarus supports guardian access. Parents can be invited to view their child's dashboard, including points, behaviors, and expectations. This helps keep families informed and involved in their child's classroom experience.",
+    answer: "Yes! ClassClarus supports guardian access. Parents can be invited to view their child&apos;s dashboard, including points, behaviors, and expectations. This helps keep families informed and involved in their child&apos;s classroom experience.",
     value: "item-8",
   },
   {
@@ -76,7 +76,7 @@ const FAQList: FAQProps[] = [
   },
   {
     question: "How do I get started?",
-    answer: "Getting started is easy! Sign up for a free account, create your first class, and add students (manually or via Google Classroom import). Then set up your behaviors and rewards, and you're ready to start gamifying your classroom. Most teachers are up and running within 15 minutes.",
+    answer: "Getting started is easy! Sign up for a free account, create your first class, and add students (manually or via Google Classroom import). Then set up your behaviors and rewards, and you&apos;re ready to start gamifying your classroom. Most teachers are up and running within 15 minutes.",
     value: "item-12",
   },
 ];

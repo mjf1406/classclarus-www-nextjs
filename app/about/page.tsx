@@ -16,7 +16,7 @@ const values = [
   {
     icon: Lightbulb,
     title: "Teacher-Designed",
-    description: "Built by educators who understand classroom realities. We know what works because we've been there.",
+    description: "Built by educators who understand classroom realities. We know what works because we&apos;ve been there.",
   },
   {
     icon: Users,
@@ -26,7 +26,7 @@ const values = [
   {
     icon: Target,
     title: "Simplicity First",
-    description: "Powerful doesn't mean complicated. We believe the best tools get out of your way and just work.",
+    description: "Powerful doesn&apos;t mean complicated. We believe the best tools get out of your way and just work.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default function AboutPage() {
               </p>
               <p>
                 We remain committed to our core belief: great classroom tools should be 
-                accessible to every teacher. That's why ClassClarus offers a robust free 
+                accessible to every teacher. That&apos;s why ClassClarus offers a robust free 
                 tier and keeps our pricing teacher-friendly.
               </p>
             </div>
