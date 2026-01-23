@@ -92,7 +92,7 @@ export default function PrivacyPolicyPage() {
               <p className="text-muted-foreground">
                 For users who sync with <strong>Google Classroom</strong>, we
                 import class rosters containing student names and email
-                addresses only.
+                addresses only. This information is required to authenticate and authorize the student when they login.
               </p>
 
               <h3 className="text-xl font-medium mt-6 mb-2">Usage Logs</h3>
