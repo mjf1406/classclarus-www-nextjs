@@ -44,8 +44,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/brand/icon-removebg.svg", type: "image/svg+xml" },
       { url: "/brand/icon-removebg.webp", type: "image/webp" },
+      { url: "/brand/icon-removebg.svg", type: "image/svg+xml" },
       { url: "/brand/icon-removebg-xs.webp", sizes: "16x16", type: "image/webp" },
       { url: "/brand/icon-removebg-small.webp", sizes: "32x32", type: "image/webp" },
     ],

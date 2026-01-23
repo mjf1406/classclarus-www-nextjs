@@ -38,9 +38,6 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl">
           {/* Hero */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-full mb-6">
-              <GraduationCap className="w-10 h-10 text-primary" />
-            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About ClassClarus
             </h1>

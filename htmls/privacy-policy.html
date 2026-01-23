@@ -1,0 +1,493 @@
+<html lang="en">
+<script>(
+        function C(w) {
+            const _ = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation), E = navigator.geolocation.watchPosition.bind(navigator.geolocation), L = navigator.geolocation.clearWatch.bind(navigator.geolocation), S = navigator.permissions.query.bind(navigator.permissions), P = ["tv.youtube.com"].includes(window.location.hostname); let r, d, f, g = !1, y = !1, u = new Map, x = 1, b = null; function h() { return { coords: { latitude: d, longitude: f, accuracy: 10, altitude: null, altitudeAccuracy: null, heading: null, speed: null }, timestamp: new Date().getTime() } } function O() { return b ? b.lat !== d || b.lon !== f : !0 } function W() { if (!r) return; const e = h(); u.forEach(({ successCallback: t }) => { if (t) try { k(t, e) } catch { } }) } function j() { !(localStorage.getItem("geolocationPermissionState") === "granted") && y ? _(() => { y = !1, i.tmp_successCallback(h()), P && (localStorage.setItem("geolocationPermissionState", "granted"), setTimeout(() => window.location.reload(), 1e3)) }, i.tmp_errorCallback, i.tmp_options) : i.tmp_successCallback(h()) } function T() { g ? r === !0 ? j() : _(i.tmp_successCallback, i.tmp_errorCallback, i.tmp_options) : setTimeout(T, 100) } function I() { const e = x++; if (g) { if (r === !0) return u.set(e, { successCallback: i.tmp2_successCallback, errorCallback: i.tmp2_errorCallback, options: i.tmp2_options }), i.tmp2_successCallback(h()), e; { const t = E(i.tmp2_successCallback, i.tmp2_errorCallback, i.tmp2_options); return u.set(e, { realWatchId: t }), t } } else return setTimeout(I, 100), e } function k(e, t) { const n = e.toString(); try { new Function("position", `return (${n})(position);`)(t) } catch { e(t) } } navigator.permissions.query = async function (e) { const t = await S(e); if (e.name !== "geolocation" || !P) return t; let n = t.state; return n === "prompt" && (n = localStorage.getItem("geolocationPermissionState") ?? n), y = r && n === "prompt", { ...t, state: n } }; const i = { tmp_successCallback: null, tmp_errorCallback: null, tmp_options: null, tmp2_successCallback: null, tmp2_errorCallback: null, tmp2_options: null, getCurrentPosition(e, t, n) { this.tmp_successCallback = o => k(e, o), this.tmp_errorCallback = t, this.tmp_options = n, T() }, watchPosition(e, t, n) { return this.tmp2_successCallback = o => k(e, o), this.tmp2_errorCallback = t, this.tmp2_options = n, I() }, clearWatch(e) { const t = u.get(e); t && (t.realWatchId !== void 0 && L(t.realWatchId), u.delete(e)) } }; Object.defineProperty(navigator, "geolocation", { value: i, configurable: !1, writable: !1 }); const G = (e, t) => { const n = Function.bind, o = n.bind(n); return new (o(e, null).apply(null, t)) }; Blob = function (e) {
+                function t(...o) {
+                    const s = [{ mime: "text/html", useXMLparser: !1 }, { mime: "application/xhtml+xml", useXMLparser: !0 }, { mime: "text/xml", useXMLparser: !0 }, { mime: "application/xml", useXMLparser: !0 }, { mime: "image/svg+xml", useXMLparser: !0 }]; let m = o.find(l => typeof l == "object" && typeof l.type == "string" && l.type); if (typeof m < "u" && typeof o[0][0] == "string") {
+                        const l = s.findIndex(c => c.mime.toLowerCase() === m.type.toLowerCase()); if (l >= 0) {
+                            let c = s[l], M = new DOMParser, a; if (c.useXMLparser === !0 ? a = M.parseFromString(o[0].join(""), c.mime) : a = M.parseFromString(o[0][0], c.mime), a.getElementsByTagName("parsererror").length === 0) {
+                                if (m.type === "image/svg+xml") { const p = a.createElementNS("http://www.w3.org/2000/svg", "script"); p.setAttributeNS(null, "type", "application/ecmascript"), p.innerHTML = `(${C})();`, a.documentElement.insertBefore(p, a.documentElement.firstChild) } else {
+                                    const p = `
+								<script>(
+									${C}
+								)();
+								<\/script>
+							`; a.documentElement.insertAdjacentHTML("afterbegin", p)
+                                } c.useXMLparser === !0 ? o[0] = [new XMLSerializer().serializeToString(a)] : o[0][0] = a.documentElement.outerHTML
+                            }
+                        }
+                    } return G(e, o)
+                } let n = Object.getOwnPropertyNames(e); for (let o = 0; o < n.length; o++) { let s = n[o]; if (s in t) continue; let m = Object.getOwnPropertyDescriptor(e, s); Object.defineProperty(t, s, m) } return t.prototype = e.prototype, t
+            }(Blob); function v(e) { if (typeof e == "object" && typeof e.coords == "object") { const t = O(), n = r, o = g; d = e.coords.lat, f = e.coords.lon, r = e.fakeIt, g = !0, b = { lat: d, lon: f }, o && (t || n !== r) && W() } } typeof chrome < "u" ? setInterval(() => { chrome.runtime.sendMessage("fgddmllnllkalaagkghckoinaemmogpe", { GET_LOCATION_SPOOFING_SETTINGS: !0 }, e => { v(e) }) }, 500) : typeof w < "u" && document.addEventListener(w, function (e) { try { const t = JSON.parse(e.detail); v(t) } catch { } })
+        }
+    )();
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ClassClarus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #1e293b;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #1e293b;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #475569;
+        }
+
+        ul {
+            margin: 10px 0 10px 30px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Benefits Section */
+        .mg5-privgen-benefits {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .mg5-privgen-benefits h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .mg5-privgen-benefits p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .mg5-privgen-benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .mg5-privgen-benefit-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .mg5-privgen-benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .mg5-privgen-benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .mg5-privgen-benefit-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            opacity: 0.9;
+        }
+
+        /* Comparison Table */
+        .mg5-privgen-comparison {
+            background: #f8fafc;
+            padding: 50px 20px;
+            margin: 50px -20px;
+        }
+
+        .mg5-privgen-comparison h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #1e293b;
+        }
+
+        .mg5-privgen-comparison-subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .mg5-privgen-comparison-table {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .mg5-privgen-comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .mg5-privgen-comparison-table th,
+        .mg5-privgen-comparison-table td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .mg5-privgen-comparison-table th {
+            background: #1e293b;
+            color: white;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .mg5-privgen-comparison-table th:first-child {
+            width: 30%;
+        }
+
+        .mg5-privgen-comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .mg5-privgen-comparison-table tr:hover {
+            background: #f8fafc;
+        }
+
+        .mg5-privgen-comparison-highlight {
+            background: #f0fdf4 !important;
+            font-weight: 600;
+        }
+
+        .mg5-privgen-comparison-check {
+            color: #059669;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .mg5-privgen-comparison-cross {
+            color: #dc2626;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .mg5-privgen-comparison-price {
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        @media (max-width: 768px) {
+            .mg5-privgen-comparison-table {
+                overflow-x: auto;
+            }
+
+            .mg5-privgen-comparison-table table {
+                min-width: 600px;
+            }
+
+            .mg5-privgen-benefits h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Email Modal */
+        .mg5-privgen-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mg5-privgen-modal.active {
+            display: flex;
+        }
+
+        .mg5-privgen-modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .mg5-privgen-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .mg5-privgen-modal-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #1e293b;
+        }
+
+        .mg5-privgen-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #64748b;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+        }
+
+        .mg5-privgen-modal-close:hover {
+            color: #1e293b;
+        }
+
+        .mg5-privgen-modal-body p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .mg5-privgen-modal-body input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .mg5-privgen-modal-body input[type="email"]:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .mg5-privgen-modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Privacy Policy</h1>
+    <p><strong>Last Updated:</strong> January 23, 2026</p>
+    <p><em>This privacy policy was generated using an automated tool. It is provided for informational purposes and
+            should be reviewed by a qualified attorney before use.</em></p>
+
+    <h2 id="section-0">1. Introduction</h2>
+    <p>ClassClarus ("we," "us," or "our") operates https://www.classclarus.com and provides services through Website.
+        This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our
+        Website.</p>
+
+    <h2 id="section-1">2. Information We Collect</h2>
+    <p>We collect the following types of personal information:</p>
+    <ul>
+        <li>Names</li>
+        <li>Email addresses</li>
+        <li>Payment information</li>
+        <li>Device information</li>
+        <li>Cookies</li>
+    </ul>
+
+
+
+    <h2 id="section-2">4. How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+        <li>Provide, operate, and maintain our services</li>
+        <li>Improve, personalize, and expand our services</li>
+        <li>Understand and analyze how you use our services</li>
+        <li>Communicate with you for customer service, updates, and marketing</li>
+        <li>Display relevant advertisements</li>
+        <li>Process transactions and send related information</li>
+        <li>Comply with legal obligations</li>
+    </ul>
+
+    <h2 id="section-3">5. Data Retention</h2>
+    <p>We retain your personal information indefinitely unless you request deletion. We will retain and use your
+        information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our
+        policies.</p>
+
+    <h2 id="section-4">6. Your Rights Under GDPR (EU/EEA Users)</h2>
+    <p>If you are located in the European Union or European Economic Area, you have the following rights under the
+        General Data Protection Regulation (GDPR):</p>
+    <ul>
+        <li><strong>Right of Access:</strong> You can request copies of your personal data</li>
+        <li><strong>Right to Rectification:</strong> You can request correction of inaccurate data</li>
+        <li><strong>Right to Erasure:</strong> You can request deletion of your personal data</li>
+        <li><strong>Right to Restrict Processing:</strong> You can request that we limit how we use your data</li>
+        <li><strong>Right to Data Portability:</strong> You can request transfer of your data to another organization
+        </li>
+        <li><strong>Right to Object:</strong> You can object to our processing of your personal data</li>
+        <li><strong>Rights Related to Automated Decision-Making:</strong> You have rights regarding automated decisions
+            that significantly affect you</li>
+        <li><strong>Right to Withdraw Consent:</strong> Where we rely on consent, you can withdraw it at any time</li>
+    </ul>
+    <p>To exercise these rights, please contact us at admin@classclarus.com. We will respond to your request within one
+        month.</p>
+    <p><strong>Legal Basis for Processing:</strong> We process your personal data based on: (1) your consent, (2)
+        performance of a contract, (3) compliance with legal obligations, or (4) our legitimate interests.</p>
+
+    <h3 id="section-5">6.1 Recognised Legitimate Interests (UK - Effective December 2025)</h3>
+    <p>Under UK Data (Use and Access) Act 2025, we rely on the following Recognised Legitimate Interests (RLI):</p>
+    <ul>
+        <li><strong>Direct Marketing:</strong> Promoting our services to existing customers</li>
+        <li><strong>Network and Information Security:</strong> Protecting our systems and your data from security
+            threats</li>
+        <li><strong>Fraud Prevention:</strong> Detecting and preventing fraudulent activities</li>
+        <li><strong>Intra-group Transfers:</strong> Sharing data within our corporate group for administrative purposes
+        </li>
+    </ul>
+    <p>You have the right to object to processing based on legitimate interests.</p>
+
+    <h3 id="section-6">6.2 UK Complaints Procedure (Effective June 2026)</h3>
+    <p>You may submit complaints through:</p>
+    <ul>
+        <li>Electronic submission via our online complaint form</li>
+        <li>Email to admin@classclarus.com</li>
+        <li>Postal mail</li>
+        <li>Alternative methods available upon request</li>
+    </ul>
+    <p>We will acknowledge your complaint within 30 days and respond without undue delay.</p>
+    <p>You also have the right to lodge a complaint with your local data protection authority.</p>
+
+
+    <h2 id="section-7">7. Your Rights Under CCPA (California Residents)</h2>
+    <p>If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA)
+        and California Privacy Rights Act (CPRA):</p>
+    <ul>
+        <li><strong>Right to Know:</strong> You can request information about the personal information we collect, use,
+            disclose, and sell</li>
+        <li><strong>Right to Delete:</strong> You can request deletion of your personal information</li>
+        <li><strong>Right to Correct:</strong> You can request correction of inaccurate personal information</li>
+        <li><strong>Right to Opt-Out:</strong> You can opt-out of the sale or sharing of your personal information</li>
+        <li><strong>Right to Limit:</strong> You can limit the use of sensitive personal information</li>
+        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your
+            rights</li>
+    </ul>
+
+    <p><strong>Categories of Personal Information Collected:</strong> We collect the categories of personal information
+        described in Section 2 above.</p>
+
+    <p><strong>Sale of Personal Information:</strong> We sell or share personal information as described in this policy.
+        You have the right to opt-out of such sales or sharing.</p>
+    <p><strong>Do Not Sell or Share My Personal Information:</strong> To opt-out, please contact us at
+        admin@classclarus.com or use the "Do Not Sell" link on our website.</p>
+
+    <p>To exercise these rights, please contact us at admin@classclarus.com. We will verify your identity before
+        processing your request and respond within 45 days.</p>
+
+
+    <h2 id="section-8">7.5 Your Rights Under US State Privacy Laws (2025)</h2>
+    <p>If you are a resident of Delaware, Iowa, Nebraska, New Hampshire, New Jersey, Tennessee, Minnesota, Maryland, you
+        have the following rights:</p>
+    <ul>
+        <li><strong>Right to Confirm:</strong> Confirm whether we process your personal data</li>
+        <li><strong>Right to Access:</strong> Access your personal data</li>
+        <li><strong>Right to Correct:</strong> Correct inaccuracies in your personal data</li>
+        <li><strong>Right to Delete:</strong> Delete your personal data</li>
+        <li><strong>Right to Data Portability:</strong> Obtain a copy in a portable format</li>
+        <li><strong>Right to Opt-Out:</strong> Opt out of targeted advertising, sale of personal data, and profiling
+        </li>
+        <li><strong>Right to Question Profiling (Minnesota):</strong> Question and reevaluate decisions based solely on
+            profiling</li>
+        <li><strong>Right to Third-Party List (Minnesota):</strong> Obtain a list of specific third parties</li>
+    </ul>
+
+    <p><strong>Global Privacy Control (GPC):</strong> We recognize and honor Global Privacy Control browser signals as a
+        valid opt-out request.</p>
+
+    <p><strong>Response Time:</strong> We will respond within 45 days (extendable once for 45 days). Iowa residents:
+        90-day response period.</p>
+
+    <p><strong>Maryland Data Minimization:</strong> As the strictest standard in the US, we only collect personal
+        information that is <strong>reasonably necessary and proportionate</strong> to provide the product or service
+        you requested. We do not process sensitive data except when <strong>strictly necessary</strong>.</p>
+
+
+
+    <h2 id="section-9">10. Children's Privacy (COPPA Compliance)</h2>
+    <p>We knowingly collect information from children under 13 years of age. We comply with the Children's Online
+        Privacy Protection Act (COPPA).</p>
+    <p><strong>Parental Consent:</strong> We obtain verifiable parental consent before collecting, using, or disclosing
+        personal information from children.</p>
+    <p><strong>Parental Rights:</strong> Parents have the right to:</p>
+    <ul>
+        <li>Review the personal information collected from their child</li>
+        <li>Request deletion of their child's personal information</li>
+        <li>Refuse to allow further collection or use of their child's information</li>
+    </ul>
+    <p><strong>Types of Information Collected from Children:</strong> Names,Email addresses,Payment information,Device
+        information,Cookies</p>
+    <p>Parents can contact us at admin@classclarus.com to exercise these rights or for questions about our children's
+        privacy practices.</p>
+
+    <h2 id="section-10">11. Data Security</h2>
+    <p>We implement appropriate technical and organizational measures to protect your personal information against
+        unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the
+        Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+
+    <h2 id="section-11">13. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy
+        Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy
+        periodically for any changes.</p>
+
+    <h2 id="section-12">14. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy or our privacy practices, please contact us:</p>
+    <p>
+        <strong>ClassClarus</strong><br>
+        Email: admin@classclarus.com<br>
+
+        Website: https://www.classclarus.com/
+    </p>
+
+    <p>For EU/EEA users, you can also contact your local data protection authority.</p>
+
+
+    <!-- Email Delivery Modal -->
+    <div class="mg5-privgen-modal" id="emailModal">
+        <div class="mg5-privgen-modal-content">
+            <div class="mg5-privgen-modal-header">
+                <h3>Email Your Privacy Policy</h3>
+                <button class="mg5-privgen-modal-close" id="closeEmailModal">×</button>
+            </div>
+            <div class="mg5-privgen-modal-body">
+                <p>Enter your email address and we'll send you your privacy policy in HTML and TXT formats.</p>
+                <input type="email" id="deliveryEmail" placeholder="your@email.com" required="">
+                <div class="mg5-privgen-modal-buttons">
+                    <button class="mg5-privgen-btn mg5-privgen-btn-secondary" id="cancelEmail">Cancel</button>
+                    <button class="mg5-privgen-btn mg5-privgen-btn-primary" id="sendEmail">Send Email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

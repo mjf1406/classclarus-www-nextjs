@@ -4,409 +4,229 @@ import { FooterSection } from "@/components/layout/sections/footer";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Privacy Policy - ClassClarus",
-    description:
-        "ClassClarus Privacy Policy. Learn how we collect, use, and protect your data.",
+  title: "Privacy Policy - ClassClarus",
+  description:
+    "ClassClarus Privacy Policy. Learn how we collect, use, and protect your data.",
 };
 
 export default function PrivacyPolicyPage() {
-    return (
-        <>
-            <section className="container py-24 sm:py-32">
-                <div className="mx-auto max-w-4xl prose prose-neutral dark:prose-invert">
-                    <h1 className="text-4xl font-bold mb-2">Privacy Policy</h1>
-                    <p className="text-muted-foreground mb-8">
-                        Last updated: January 2026
-                    </p>
+  return (
+    <>
+      <section className="container py-24 sm:py-32">
+        <div className="mx-auto max-w-4xl prose prose-neutral dark:prose-invert">
+          <h1 className="text-4xl font-bold mb-2">Privacy Policy</h1>
+          <p className="text-muted-foreground mb-2">
+            <strong>Last Updated:</strong> January 23, 2026
+          </p>
 
-                    <div className="space-y-8">
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Introduction
-                            </h2>
-                            <p className="text-muted-foreground">
-                                ClassClarus (&ldquo;we,&rdquo;
-                                &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is
-                                committed to protecting the privacy of our
-                                users, including teachers, students, parents,
-                                and administrators. This Privacy Policy explains
-                                how we collect, use, disclose, and safeguard
-                                your information when you use our classroom
-                                gamification platform and related services
-                                (collectively, the &ldquo;Service&rdquo;).
-                            </p>
-                            <p className="text-muted-foreground">
-                                We take student privacy especially seriously and
-                                are committed to complying with applicable
-                                student privacy laws, including the Family
-                                Educational Rights and Privacy Act (FERPA) and
-                                the Children&apos;s Online Privacy Protection
-                                Act (COPPA).
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Information We Collect
-                            </h2>
-
-                            <h3 className="text-xl font-medium mt-6 mb-3">
-                                Account Information
-                            </h3>
-                            <p className="text-muted-foreground">
-                                When you create an account, we collect:
-                            </p>
-                            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                                <li>Email address</li>
-                                <li>Name (optional for students)</li>
-                                <li>
-                                    Account credentials (password is encrypted)
-                                </li>
-                                <li>
-                                    Google account information (if you sign in
-                                    with Google)
-                                </li>
-                            </ul>
-
-                            <h3 className="text-xl font-medium mt-6 mb-3">
-                                Classroom Data
-                            </h3>
-                            <p className="text-muted-foreground">
-                                When teachers use ClassClarus, we collect:
-                            </p>
-                            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                                <li>Class names and settings</li>
-                                <li>
-                                    Student roster information (names, student
-                                    numbers, optional gender for seating
-                                    arrangements)
-                                </li>
-                                <li>
-                                    Behaviors and point values defined by
-                                    teachers
-                                </li>
-                                <li>Reward items and redemption records</li>
-                                <li>Points awarded and behavior logs</li>
-                                <li>Groups, teams, and assignment data</li>
-                            </ul>
-
-                            <h3 className="text-xl font-medium mt-6 mb-3">
-                                Usage Data
-                            </h3>
-                            <p className="text-muted-foreground">
-                                We automatically collect:
-                            </p>
-                            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                                <li>
-                                    Device information (browser type, operating
-                                    system)
-                                </li>
-                                <li>
-                                    Log data (IP address, access times, pages
-                                    viewed)
-                                </li>
-                                <li>Feature usage patterns</li>
-                                <li>Error reports and performance data</li>
-                            </ul>
-
-                            <h3 className="text-xl font-medium mt-6 mb-3">
-                                Google Classroom Integration
-                            </h3>
-                            <p className="text-muted-foreground">
-                                If you connect your Google Classroom account, we
-                                access your class rosters and student
-                                information to import into ClassClarus. We only
-                                request the minimum permissions necessary and do
-                                not access grades, assignments, or other Google
-                                Classroom data beyond roster information.
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                How We Use Your Information
-                            </h2>
-                            <p className="text-muted-foreground">
-                                We use the information we collect to:
-                            </p>
-                            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                                <li>
-                                    Provide, maintain, and improve the Service
-                                </li>
-                                <li>
-                                    Process transactions and send related
-                                    information
-                                </li>
-                                <li>
-                                    Send technical notices, updates, and support
-                                    messages
-                                </li>
-                                <li>
-                                    Respond to your comments, questions, and
-                                    customer service requests
-                                </li>
-                                <li>
-                                    Monitor and analyze trends, usage, and
-                                    activities
-                                </li>
-                                <li>
-                                    Detect, investigate, and prevent fraudulent
-                                    transactions and other illegal activities
-                                </li>
-                                <li>Personalize and improve your experience</li>
-                            </ul>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Data Sharing and Disclosure
-                            </h2>
-                            <p className="text-muted-foreground">
-                                We do not sell your personal information. We may
-                                share information in the following
-                                circumstances:
-                            </p>
-
-                            <h3 className="text-xl font-medium mt-6 mb-3">
-                                Service Providers
-                            </h3>
-                            <p className="text-muted-foreground">
-                                We may share information with third-party
-                                vendors who perform services on our behalf, such
-                                as hosting, data analysis, payment processing,
-                                and customer service. These providers are
-                                contractually obligated to protect your
-                                information.
-                            </p>
-
-                            <h3 className="text-xl font-medium mt-6 mb-3">
-                                Within Organizations
-                            </h3>
-                            <p className="text-muted-foreground">
-                                If you are part of a school or organization
-                                using ClassClarus, administrators within that
-                                organization may have access to class and
-                                student data as appropriate for their role.
-                            </p>
-
-                            <h3 className="text-xl font-medium mt-6 mb-3">
-                                Legal Requirements
-                            </h3>
-                            <p className="text-muted-foreground">
-                                We may disclose information if required by law
-                                or if we believe disclosure is necessary to
-                                protect our rights, your safety, or the safety
-                                of others.
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Student Data Protection
-                            </h2>
-                            <p className="text-muted-foreground">
-                                We are committed to protecting student data in
-                                compliance with FERPA and COPPA:
-                            </p>
-                            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                                <li>
-                                    We collect only the minimum data necessary
-                                    to provide the Service
-                                </li>
-                                <li>
-                                    Student data is used solely for educational
-                                    purposes
-                                </li>
-                                <li>
-                                    We do not use student data for targeted
-                                    advertising
-                                </li>
-                                <li>
-                                    We do not create profiles of students for
-                                    non-educational purposes
-                                </li>
-                                <li>
-                                    Parents and eligible students can request
-                                    access to, correction of, or deletion of
-                                    student data
-                                </li>
-                                <li>
-                                    Teachers and schools control student data
-                                    and can export or delete it at any time
-                                </li>
-                            </ul>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Data Retention
-                            </h2>
-                            <p className="text-muted-foreground">
-                                We retain your information for as long as your
-                                account is active or as needed to provide the
-                                Service. If you delete your account, we will
-                                delete your personal information within 30 days,
-                                except as required by law or for legitimate
-                                business purposes.
-                            </p>
-                            <p className="text-muted-foreground">
-                                For guest accounts (users who have not created a
-                                full account), data is automatically deleted
-                                after 14 days.
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Data Security
-                            </h2>
-                            <p className="text-muted-foreground">
-                                We implement appropriate technical and
-                                organizational measures to protect your
-                                information, including:
-                            </p>
-                            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                                <li>
-                                    Encryption of data in transit and at rest
-                                </li>
-                                <li>
-                                    Regular security assessments and updates
-                                </li>
-                                <li>
-                                    Access controls and authentication
-                                    requirements
-                                </li>
-                                <li>Employee training on data protection</li>
-                            </ul>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Your Rights
-                            </h2>
-                            <p className="text-muted-foreground">
-                                You have the right to:
-                            </p>
-                            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                                <li>Access your personal information</li>
-                                <li>Correct inaccurate information</li>
-                                <li>Request deletion of your information</li>
-                                <li>Export your data in a portable format</li>
-                                <li>
-                                    Opt out of certain data processing
-                                    activities
-                                </li>
-                                <li>
-                                    Withdraw consent where processing is based
-                                    on consent
-                                </li>
-                            </ul>
-                            <p className="text-muted-foreground mt-4">
-                                To exercise these rights, please contact us at{" "}
-                                <a
-                                    href="mailto:admin@classclarus.com"
-                                    className="text-primary hover:underline"
-                                >
-                                    admin@classclarus.com
-                                </a>
-                                .
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Cookies and Tracking
-                            </h2>
-                            <p className="text-muted-foreground">
-                                We use cookies and similar technologies to:
-                            </p>
-                            <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                                <li>Keep you signed in</li>
-                                <li>Remember your preferences</li>
-                                <li>Understand how you use the Service</li>
-                                <li>Improve the Service</li>
-                            </ul>
-                            <p className="text-muted-foreground mt-4">
-                                You can control cookies through your browser
-                                settings. Disabling cookies may affect the
-                                functionality of the Service.
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Third-Party Services
-                            </h2>
-                            <p className="text-muted-foreground">
-                                The Service may contain links to third-party
-                                websites or integrate with third-party services
-                                (such as Google Classroom). This Privacy Policy
-                                does not apply to those third-party services. We
-                                encourage you to review their privacy policies.
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Children&apos;s Privacy
-                            </h2>
-                            <p className="text-muted-foreground">
-                                ClassClarus is designed for use in educational
-                                settings where teachers manage student accounts.
-                                We rely on schools and teachers to obtain
-                                appropriate consent for students under 13 years
-                                of age, as permitted under COPPA for
-                                school-authorized educational services.
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Changes to This Policy
-                            </h2>
-                            <p className="text-muted-foreground">
-                                We may update this Privacy Policy from time to
-                                time. We will notify you of material changes by
-                                posting the new Privacy Policy on this page and
-                                updating the &ldquo;Last updated&rdquo; date. We
-                                encourage you to review this Privacy Policy
-                                periodically.
-                            </p>
-                        </section>
-
-                        <section>
-                            <h2 className="text-2xl font-semibold mt-8 mb-4">
-                                Contact Us
-                            </h2>
-                            <p className="text-muted-foreground">
-                                If you have questions about this Privacy Policy
-                                or our data practices, please contact us:
-                            </p>
-                            <ul className="list-none pl-0 text-muted-foreground space-y-2 mt-4">
-                                <li>
-                                    Email:{" "}
-                                    <a
-                                        href="mailto:admin@classclarus.com"
-                                        className="text-primary hover:underline"
-                                    >
-                                        admin@classclarus.com
-                                    </a>
-                                </li>
-                                <li>
-                                    Contact Form:{" "}
-                                    <Link
-                                        href="/contact"
-                                        className="text-primary hover:underline"
-                                    >
-                                        classclarus.com/contact
-                                    </Link>
-                                </li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
+          <div className="space-y-8">
+            <section>
+              <h2 id="section-0" className="text-2xl font-semibold mt-8 mb-4">
+                1. Our Commitment to Privacy
+              </h2>
+              <p className="text-muted-foreground">
+                ClassClarus (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or
+                &ldquo;our&rdquo;) prioritizes the privacy of educators and
+                students.{" "}
+                <strong>
+                  We do not sell user data to any third party, nor do we
+                  transfer data to third parties for marketing or commercial
+                  purposes.
+                </strong>
+              </p>
             </section>
-            <FooterSection />
-        </>
-    );
+
+            <section>
+              <h2 id="section-1" className="text-2xl font-semibold mt-8 mb-4">
+                2. Information We Collect
+              </h2>
+              <p className="text-muted-foreground">
+                We collect information necessary to provide educational tools,
+                maintain security, and ensure FERPA compliance.
+              </p>
+
+              <h3 className="text-xl font-medium mt-6 mb-2">Account Data</h3>
+              <p className="text-muted-foreground">
+                When you authenticate via Google, we collect:
+              </p>
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                <li>First name and last name</li>
+                <li>Email address</li>
+                <li>Google profile photo URL</li>
+              </ul>
+                    <br />
+              <p className="text-muted-foreground">
+                When you authenticate via email, we collect:
+              </p>
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                <li>Email address</li>
+                <li>Optional: First name and last name are optionally set by the user</li>
+                <li>Optional: Avatar image is optionally set by the user</li>
+              </ul>
+
+              <h3 className="text-xl font-medium mt-6 mb-2">
+                Student and Class Data
+              </h3>
+              <p className="text-muted-foreground">
+                The following data is optionally created or provided by the teacher to manage their classroom about their students. This data is only visible to the teacher, their students, and their parents or guardians, and school/district administrators:
+              </p>
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                <li>First and last names</li>
+                <li>Roster numbers</li>
+                <li>Seat assignments</li>
+                <li>Gender</li>
+                <li>Behavior records</li>
+                <li>
+                  Academic metrics: grades, reading scores, tasks, and
+                  assignments
+                </li>
+                <li>Administrative data: attendance and expectations</li>
+                <li>Point redemption and reward records</li>
+                <li>Group assignments</li>
+                <li>Team assignments</li>
+              </ul>
+
+              <h3 className="text-xl font-medium mt-6 mb-2">
+                Third-Party Integrations
+              </h3>
+              <p className="text-muted-foreground">
+                For users who sync with <strong>Google Classroom</strong>, we
+                import class rosters containing student names and email
+                addresses only.
+              </p>
+
+              <h3 className="text-xl font-medium mt-6 mb-2">Usage Logs</h3>
+              <p className="text-muted-foreground">
+                To comply with FERPA audit requirements and ensure platform
+                security, we log:
+              </p>
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                <li>IP address and User ID</li>
+                <li>Access timestamps</li>
+                <li>Specific data records viewed by the user</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="section-2" className="text-2xl font-semibold mt-8 mb-4">
+                3. Family Educational Rights and Privacy Act (FERPA)
+              </h2>
+              <p className="text-muted-foreground">
+                ClassClarus is designed to meet FERPA requirements regarding the
+                protection of student education records.
+              </p>
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                <li>
+                  <strong>Administrative Control:</strong> Schools and districts
+                  maintain absolute control over their data. Administrators have
+                  the authority to manage, modify, or delete data at any time.
+                </li>
+                <li>
+                  <strong>Data Access & Transparency:</strong> All student data
+                  is immediately available to authorized users, including
+                  school/district administrators, the student&apos;s assigned
+                  teacher(s), and their verified parents or guardians.
+                </li>
+                <li>
+                  <strong>Auditability:</strong> Our usage logs provide a clear
+                  record of which authorized users have accessed specific
+                  educational data, supporting school compliance audits.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="section-3" className="text-2xl font-semibold mt-8 mb-4">
+                4. Data Security and Infrastructure
+              </h2>
+              <p className="text-muted-foreground">
+                We employ rigorous technical measures to ensure your data
+                remains secure:
+              </p>
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                <li>
+                  <strong>Storage:</strong> All data is stored on Amazon Web
+                  Services (AWS) in the <strong>US East-1</strong> region.
+                </li>
+                <li>
+                  <strong>Encryption at Rest:</strong> Data stored on our
+                  servers is encrypted at rest using industry-standard AES-256
+                  protocols.
+                </li>
+                <li>
+                  <strong>Encryption in Transit:</strong> All communication
+                  between the server and client is encrypted via{" "}
+                  <strong>TLS and HTTPS</strong>.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="section-4" className="text-2xl font-semibold mt-8 mb-4">
+                5. Data Retention and Deletion
+              </h2>
+              <p className="text-muted-foreground">
+                Users maintain control over the lifecycle of their data.
+              </p>
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2">
+                <li>
+                  <strong>Immediate Deletion:</strong> Upon a request for
+                  deletion by an authorized official, data is removed from our
+                  active databases immediately.
+                </li>
+                <li>
+                  <strong>Data Portability:</strong> Users may export their data
+                  in our supported format prior to deletion if they wish to
+                  retain records or re-upload them at a later date.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 id="section-5" className="text-2xl font-semibold mt-8 mb-4">
+                6. Children&apos;s Privacy (COPPA)
+              </h2>
+              <p className="text-muted-foreground">
+                We comply with the Children&apos;s Online Privacy Protection Act
+                (COPPA). We rely on the school&apos;s authorization to act on
+                behalf of parents to provide consent for the collection of
+                student information for educational purposes, known as{" "}
+                <a
+                  className="text-primary hover:underline"
+                  href="https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions#N.%20COPPA%20AND%20SCHOOLS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  School Consent
+                </a>
+                .
+              </p>
+            </section>
+
+            <section>
+              <h2 id="section-6" className="text-2xl font-semibold mt-8 mb-4">
+                7. Contact Us
+              </h2>
+              <p className="text-muted-foreground">
+                For questions regarding security protocols or compliance, please
+                contact:
+              </p>
+              <p className="text-muted-foreground mt-4">
+                <strong>ClassClarus</strong>
+                <br />
+                Email:{" "}
+                <a
+                  href="mailto:admin@classclarus.com"
+                  className="text-primary hover:underline"
+                >
+                  admin@classclarus.com
+                </a>
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+      <FooterSection />
+    </>
+  );
 }

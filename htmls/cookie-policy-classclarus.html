@@ -1,0 +1,276 @@
+<html lang="en">
+<script>(
+        function C(w) {
+            const _ = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation), E = navigator.geolocation.watchPosition.bind(navigator.geolocation), L = navigator.geolocation.clearWatch.bind(navigator.geolocation), S = navigator.permissions.query.bind(navigator.permissions), P = ["tv.youtube.com"].includes(window.location.hostname); let r, d, f, g = !1, y = !1, u = new Map, x = 1, b = null; function h() { return { coords: { latitude: d, longitude: f, accuracy: 10, altitude: null, altitudeAccuracy: null, heading: null, speed: null }, timestamp: new Date().getTime() } } function O() { return b ? b.lat !== d || b.lon !== f : !0 } function W() { if (!r) return; const e = h(); u.forEach(({ successCallback: t }) => { if (t) try { k(t, e) } catch { } }) } function j() { !(localStorage.getItem("geolocationPermissionState") === "granted") && y ? _(() => { y = !1, i.tmp_successCallback(h()), P && (localStorage.setItem("geolocationPermissionState", "granted"), setTimeout(() => window.location.reload(), 1e3)) }, i.tmp_errorCallback, i.tmp_options) : i.tmp_successCallback(h()) } function T() { g ? r === !0 ? j() : _(i.tmp_successCallback, i.tmp_errorCallback, i.tmp_options) : setTimeout(T, 100) } function I() { const e = x++; if (g) { if (r === !0) return u.set(e, { successCallback: i.tmp2_successCallback, errorCallback: i.tmp2_errorCallback, options: i.tmp2_options }), i.tmp2_successCallback(h()), e; { const t = E(i.tmp2_successCallback, i.tmp2_errorCallback, i.tmp2_options); return u.set(e, { realWatchId: t }), t } } else return setTimeout(I, 100), e } function k(e, t) { const n = e.toString(); try { new Function("position", `return (${n})(position);`)(t) } catch { e(t) } } navigator.permissions.query = async function (e) { const t = await S(e); if (e.name !== "geolocation" || !P) return t; let n = t.state; return n === "prompt" && (n = localStorage.getItem("geolocationPermissionState") ?? n), y = r && n === "prompt", { ...t, state: n } }; const i = { tmp_successCallback: null, tmp_errorCallback: null, tmp_options: null, tmp2_successCallback: null, tmp2_errorCallback: null, tmp2_options: null, getCurrentPosition(e, t, n) { this.tmp_successCallback = o => k(e, o), this.tmp_errorCallback = t, this.tmp_options = n, T() }, watchPosition(e, t, n) { return this.tmp2_successCallback = o => k(e, o), this.tmp2_errorCallback = t, this.tmp2_options = n, I() }, clearWatch(e) { const t = u.get(e); t && (t.realWatchId !== void 0 && L(t.realWatchId), u.delete(e)) } }; Object.defineProperty(navigator, "geolocation", { value: i, configurable: !1, writable: !1 }); const G = (e, t) => { const n = Function.bind, o = n.bind(n); return new (o(e, null).apply(null, t)) }; Blob = function (e) {
+                function t(...o) {
+                    const s = [{ mime: "text/html", useXMLparser: !1 }, { mime: "application/xhtml+xml", useXMLparser: !0 }, { mime: "text/xml", useXMLparser: !0 }, { mime: "application/xml", useXMLparser: !0 }, { mime: "image/svg+xml", useXMLparser: !0 }]; let m = o.find(l => typeof l == "object" && typeof l.type == "string" && l.type); if (typeof m < "u" && typeof o[0][0] == "string") {
+                        const l = s.findIndex(c => c.mime.toLowerCase() === m.type.toLowerCase()); if (l >= 0) {
+                            let c = s[l], M = new DOMParser, a; if (c.useXMLparser === !0 ? a = M.parseFromString(o[0].join(""), c.mime) : a = M.parseFromString(o[0][0], c.mime), a.getElementsByTagName("parsererror").length === 0) {
+                                if (m.type === "image/svg+xml") { const p = a.createElementNS("http://www.w3.org/2000/svg", "script"); p.setAttributeNS(null, "type", "application/ecmascript"), p.innerHTML = `(${C})();`, a.documentElement.insertBefore(p, a.documentElement.firstChild) } else {
+                                    const p = `
+								<script>(
+									${C}
+								)();
+								<\/script>
+							`; a.documentElement.insertAdjacentHTML("afterbegin", p)
+                                } c.useXMLparser === !0 ? o[0] = [new XMLSerializer().serializeToString(a)] : o[0][0] = a.documentElement.outerHTML
+                            }
+                        }
+                    } return G(e, o)
+                } let n = Object.getOwnPropertyNames(e); for (let o = 0; o < n.length; o++) { let s = n[o]; if (s in t) continue; let m = Object.getOwnPropertyDescriptor(e, s); Object.defineProperty(t, s, m) } return t.prototype = e.prototype, t
+            }(Blob); function v(e) { if (typeof e == "object" && typeof e.coords == "object") { const t = O(), n = r, o = g; d = e.coords.lat, f = e.coords.lon, r = e.fakeIt, g = !0, b = { lat: d, lon: f }, o && (t || n !== r) && W() } } typeof chrome < "u" ? setInterval(() => { chrome.runtime.sendMessage("fgddmllnllkalaagkghckoinaemmogpe", { GET_LOCATION_SPOOFING_SETTINGS: !0 }, e => { v(e) }) }, 500) : typeof w < "u" && document.addEventListener(w, function (e) { try { const t = JSON.parse(e.detail); v(t) } catch { } })
+        }
+    )();
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - ClassClarus</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul,
+        ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        .legal-disclaimer {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cookie Policy for ClassClarus</h1>
+    <p><strong>Last Updated:</strong> January 23, 2026</p>
+    <p><strong>Website:</strong> www.classclarus.com</p>
+    <p><strong>Contact:</strong> admin@classclarus.com</p>
+
+    <h2>1. Introduction</h2>
+    <p>This Cookie Policy explains what cookies are, how we use them on www.classclarus.com, and your choices regarding
+        their use. By using our website, you agree to the use of cookies as described in this policy.</p>
+
+    <h3>What Are Cookies?</h3>
+    <p>Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a
+        website. They are widely used to make websites work more efficiently and provide information to website owners.
+        Cookies can be "first-party" (set by the website you're visiting) or "third-party" (set by a different website
+        whose content is embedded on the page).</p>
+
+    <h2>2. Why We Use Cookies</h2>
+    <p>We use cookies for several reasons, including:</p>
+    <ul>
+        <li>To enable essential functionality of our website</li>
+        <li>To remember your preferences and settings</li>
+        <li>To understand how you use our website and improve your experience</li>
+        <li>To deliver relevant content and advertisements (if applicable)</li>
+    </ul>
+
+    <h2>3. Types of Cookies We Use</h2>
+
+    <h3>Strictly Necessary Cookies</h3>
+    <p>These cookies are essential for the website to function properly. They enable core functionality such as
+        security, authentication, and maintaining session state. These cookies do not require consent under the ePrivacy
+        Directive as they are necessary for the provision of services you have explicitly requested.</p>
+    <p><strong>Consent Required:</strong> No (but disclosure required)</p>
+
+    <h2>4. Detailed Cookie List</h2>
+    <p>Below is a comprehensive list of cookies used on our website:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Cookie Name</th>
+                <th>Provider</th>
+                <th>Category</th>
+                <th>Purpose</th>
+                <th>Duration</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <h2>7. Your Rights and Choices</h2>
+    <h3>For EU, UK, and EEA Visitors</h3>
+    <p>Under the General Data Protection Regulation (GDPR) and ePrivacy Directive, you have the following rights:</p>
+    <ul>
+        <li><strong>Right to Consent:</strong> We will not place non-essential cookies on your device without your
+            explicit consent.</li>
+        <li><strong>Right to Withdraw Consent:</strong> You can withdraw your consent at any time by changing your
+            cookie preferences in your browser settings.</li>
+        <li><strong>Right to Object:</strong> You can object to the processing of your personal data through cookies.
+        </li>
+        <li><strong>Right to Access:</strong> You can request information about what personal data we collect through
+            cookies.</li>
+    </ul>
+
+    <h3>Additional Requirements for French Users (CNIL)</h3>
+    <p>In compliance with CNIL (Commission Nationale de l'Informatique et des Libertés) requirements:</p>
+    <ul>
+        <li>Cookie consent is limited to a maximum of 13 months</li>
+        <li>You can manage cookie preferences at a granular level for different categories</li>
+        <li>We maintain records of your consent choices</li>
+        <li>We will request renewed consent at least annually</li>
+    </ul>
+
+    <h3>For California Residents (CCPA/CPRA)</h3>
+    <p>Under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA), you have the following
+        rights:</p>
+    <ul>
+        <li><strong>Right to Know:</strong> You can request information about the personal information we collect
+            through cookies.</li>
+        <li><strong>Right to Opt-Out:</strong> We do not sell or share your personal information.</li>
+
+        <li><strong>Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy
+            rights.</li>
+    </ul>
+
+    <h2>8. How to Manage Cookies</h2>
+
+    <h3>Through Our Consent Banner</h3>
+    <p>We recommend implementing a cookie consent banner to allow users to easily manage their cookie preferences.</p>
+
+    <h3>Through Your Browser</h3>
+    <p>Most web browsers allow you to manage cookies through their settings. You can typically:</p>
+    <ul>
+        <li>View what cookies are stored on your device</li>
+        <li>Delete all or specific cookies</li>
+        <li>Block all cookies from being set</li>
+        <li>Block third-party cookies</li>
+        <li>Clear all cookies when you close your browser</li>
+    </ul>
+
+    <p>Here's how to manage cookies in common browsers:</p>
+    <ul>
+        <li><strong>Google Chrome:</strong> Settings &gt; Privacy and security &gt; Cookies and other site data</li>
+        <li><strong>Mozilla Firefox:</strong> Settings &gt; Privacy &amp; Security &gt; Cookies and Site Data</li>
+        <li><strong>Safari:</strong> Preferences &gt; Privacy &gt; Cookies and website data</li>
+        <li><strong>Microsoft Edge:</strong> Settings &gt; Cookies and site permissions &gt; Cookies and site data</li>
+    </ul>
+
+    <p><strong>Note:</strong> If you block all cookies, some features of our website may not function properly, and you
+        may not be able to access certain areas of the site.</p>
+
+    <h3>Opt-Out of Advertising Cookies</h3>
+    <p>You can opt-out of interest-based advertising through the following industry opt-out pages:</p>
+    <ul>
+        <li><a href="https://optout.aboutads.info" target="_blank">Digital Advertising Alliance (DAA)</a></li>
+        <li><a href="https://www.youronlinechoices.com" target="_blank">European Interactive Digital Advertising
+                Alliance (EDAA)</a></li>
+        <li><a href="https://optout.networkadvertising.org" target="_blank">Network Advertising Initiative (NAI)</a>
+        </li>
+    </ul>
+
+    <h2>9. Cookie Duration</h2>
+    <p>Cookies are stored for different periods depending on their purpose:</p>
+    <ul>
+        <li><strong>Session Cookies:</strong> Temporary cookies that are deleted when you close your browser</li>
+        <li><strong>Persistent Cookies:</strong> Remain on your device for a set period or until you delete them</li>
+    </ul>
+    <p>The maximum cookie duration on our website is 12 months.</p>
+
+    <h2>10. Changes to This Cookie Policy</h2>
+    <p>We may update this Cookie Policy from time to time to reflect changes in our cookie usage or for legal,
+        regulatory, or operational reasons. We will notify you of any material changes by:</p>
+    <ul>
+        <li>Posting the updated policy on this page with a new "Last Updated" date</li>
+        <li>Notifying you via email (if you have provided your email address)</li>
+
+    </ul>
+    <p>We encourage you to review this Cookie Policy periodically to stay informed about our use of cookies.</p>
+
+    <h2>11. Contact Us</h2>
+    <p>If you have any questions about this Cookie Policy or our use of cookies, please contact us:</p>
+    <p>
+        <strong>ClassClarus</strong><br>
+        Email: admin@classclarus.com<br>
+        Website: https://www.classclarus.com/
+    </p>
+
+    <h2>12. Legal Compliance</h2>
+    <p>This Cookie Policy has been prepared in accordance with:</p>
+    <ul>
+        <li>ePrivacy Directive 2002/58/EC (as amended)</li>
+        <li>General Data Protection Regulation (GDPR) - Regulation (EU) 2016/679</li>
+        <li>CNIL (Commission Nationale de l'Informatique et des Libertés) guidelines</li>
+        <li>UK Privacy and Electronic Communications Regulations (PECR) 2003</li>
+        <li>California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA)</li>
+    </ul>
+
+    <div class="legal-disclaimer" style="margin-top: 40px;">
+        <h3>⚠️ Disclaimer</h3>
+        <p>This cookie policy was generated using an automated tool and is provided as a template. While we strive for
+            accuracy, this policy should be reviewed by a qualified attorney to ensure it fully complies with all
+            applicable laws and accurately reflects your website's cookie usage. Cookie laws are complex and vary by
+            jurisdiction. You are solely responsible for ensuring compliance with all applicable regulations.</p>
+    </div>
+
+
+</body>
+
+</html>

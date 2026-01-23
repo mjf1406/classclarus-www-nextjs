@@ -1,107 +1,107 @@
 import { FooterSection } from "@/components/layout/sections/footer";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Check } from "lucide-react";
-import Link from "next/link";
-import { WEBAPP_URL } from "@/lib/config";
+// import { Button } from "@/components/ui/button";
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardFooter,
+//   CardHeader,
+//   CardTitle,
+// } from "@/components/ui/card";
+// import { Check } from "lucide-react";
+// import Link from "next/link";
+// import { WEBAPP_URL } from "@/lib/config";
 
 export const metadata = {
   title: "Pricing - ClassClarus",
   description: "Simple, transparent pricing for ClassClarus. Start free and upgrade as you grow. No hidden fees, no surprises.",
 };
 
-enum PopularPlan {
-  NO = 0,
-  YES = 1,
-}
+// enum PopularPlan {
+//   NO = 0,
+//   YES = 1,
+// }
 
-interface PlanProps {
-  title: string;
-  popular: PopularPlan;
-  price: number;
-  description: string;
-  buttonText: string;
-  benefitList: string[];
-  href: string;
-}
+// interface PlanProps {
+//   title: string;
+//   popular: PopularPlan;
+//   price: number;
+//   description: string;
+//   buttonText: string;
+//   benefitList: string[];
+//   href: string;
+// }
 
-const plans: PlanProps[] = [
-  {
-    title: "Free",
-    popular: PopularPlan.NO,
-    price: 0,
-    description: "Perfect for individual teachers getting started with classroom gamification.",
-    buttonText: "Get Started Free",
-    href: WEBAPP_URL,
-    benefitList: [
-      "Up to 2 classes",
-      "Up to 35 students per class",
-      "Points & behaviors tracking",
-      "Reward marketplace",
-      "Basic classroom tools",
-      "Student dashboards",
-      "Community support",
-    ],
-  },
-  {
-    title: "Basic",
-    popular: PopularPlan.NO,
-    price: 5,
-    description: "For teachers who need more classes and enhanced features.",
-    buttonText: "Start Basic",
-    href: WEBAPP_URL,
-    benefitList: [
-      "Up to 5 classes",
-      "Up to 40 students per class",
-      "Everything in Free",
-      "Google Classroom sync",
-      "Behavior history & logs",
-      "Custom expectations",
-      "Email support",
-    ],
-  },
-  {
-    title: "Plus",
-    popular: PopularPlan.YES,
-    price: 10,
-    description: "Our most popular plan for dedicated educators.",
-    buttonText: "Start Plus",
-    href: WEBAPP_URL,
-    benefitList: [
-      "Up to 10 classes",
-      "Up to 50 students per class",
-      "Everything in Basic",
-      "Advanced analytics",
-      "Guardian/parent access",
-      "All classroom tools",
-      "Priority email support",
-    ],
-  },
-  {
-    title: "Pro",
-    popular: PopularPlan.NO,
-    price: 20,
-    description: "For power users and school-wide implementations.",
-    buttonText: "Start Pro",
-    href: WEBAPP_URL,
-    benefitList: [
-      "Unlimited classes",
-      "Unlimited students",
-      "Everything in Plus",
-      "Organization management",
-      "Multiple teacher accounts",
-      "API access",
-      "Dedicated support",
-    ],
-  },
-];
+// const plans: PlanProps[] = [
+//   {
+//     title: "Free",
+//     popular: PopularPlan.NO,
+//     price: 0,
+//     description: "Perfect for individual teachers getting started with classroom gamification.",
+//     buttonText: "Get Started Free",
+//     href: WEBAPP_URL,
+//     benefitList: [
+//       "Up to 2 classes",
+//       "Up to 35 students per class",
+//       "Points & behaviors tracking",
+//       "Reward marketplace",
+//       "Basic classroom tools",
+//       "Student dashboards",
+//       "Community support",
+//     ],
+//   },
+//   {
+//     title: "Basic",
+//     popular: PopularPlan.NO,
+//     price: 5,
+//     description: "For teachers who need more classes and enhanced features.",
+//     buttonText: "Start Basic",
+//     href: WEBAPP_URL,
+//     benefitList: [
+//       "Up to 5 classes",
+//       "Up to 40 students per class",
+//       "Everything in Free",
+//       "Google Classroom sync",
+//       "Behavior history & logs",
+//       "Custom expectations",
+//       "Email support",
+//     ],
+//   },
+//   {
+//     title: "Plus",
+//     popular: PopularPlan.YES,
+//     price: 10,
+//     description: "Our most popular plan for dedicated educators.",
+//     buttonText: "Start Plus",
+//     href: WEBAPP_URL,
+//     benefitList: [
+//       "Up to 10 classes",
+//       "Up to 50 students per class",
+//       "Everything in Basic",
+//       "Advanced analytics",
+//       "Guardian/parent access",
+//       "All classroom tools",
+//       "Priority email support",
+//     ],
+//   },
+//   {
+//     title: "Pro",
+//     popular: PopularPlan.NO,
+//     price: 20,
+//     description: "For power users and school-wide implementations.",
+//     buttonText: "Start Pro",
+//     href: WEBAPP_URL,
+//     benefitList: [
+//       "Unlimited classes",
+//       "Unlimited students",
+//       "Everything in Plus",
+//       "Organization management",
+//       "Multiple teacher accounts",
+//       "API access",
+//       "Dedicated support",
+//     ],
+//   },
+// ];
 
 export default function PricingPage() {
   return (
@@ -109,7 +109,7 @@ export default function PricingPage() {
       <section className="container py-24 sm:py-32">
         <div className="mx-auto max-w-6xl">
           {/* Header */}
-          <div className="text-center mb-16">
+          {/* <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Simple, Transparent Pricing
             </h1>
@@ -117,10 +117,19 @@ export default function PricingPage() {
               Start free and upgrade as your needs grow. No hidden fees, no surprises. 
               Cancel anytime.
             </p>
+          </div> */}
+
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Coming Soon!
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            ClassClarus is currently in closed Beta. Stay tuned for pricing information.
+            </p>
           </div>
 
           {/* Pricing Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map(
               ({ title, popular, price, description, buttonText, benefitList, href }) => (
                 <Card
@@ -174,10 +183,10 @@ export default function PricingPage() {
                 </Card>
               )
             )}
-          </div>
+          </div> */}
 
           {/* FAQ Link */}
-          <div className="mt-16 text-center">
+          {/* <div className="mt-16 text-center">
             <p className="text-muted-foreground mb-4">
               Have questions about which plan is right for you?
             </p>
@@ -195,10 +204,10 @@ export default function PricingPage() {
                 Contact Sales
               </Link>
             </div>
-          </div>
+          </div> */}
 
           {/* Enterprise */}
-          <div className="mt-16 bg-muted/50 rounded-2xl p-8 text-center">
+          {/* <div className="mt-16 bg-muted/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold mb-4">Need a Custom Solution?</h2>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               For districts, large schools, or organizations with specific requirements, 
@@ -210,7 +219,7 @@ export default function PricingPage() {
             >
               Contact Us for Enterprise Pricing
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
       <FooterSection />
