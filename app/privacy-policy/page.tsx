@@ -177,7 +177,7 @@ export default function PrivacyPolicyPage() {
                 <li>
                   <strong>Data Portability:</strong> Users may export their data
                   in our supported format prior to deletion if they wish to
-                  retain records or re-upload them at a later date.
+                  retain records.
                 </li>
               </ul>
             </section>
