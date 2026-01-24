@@ -21,6 +21,11 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
+    question: "Why is this a subscription?",
+    answer: "We get it. We hate subscriptions, too. We also avoid them at all costs. However, ClassClarus operates on a subscription model because our hosting and database providers charge us ongoing subscription fees to keep the platform running. This is the only way we can keep ClassClarus running smoothly and provide you with the best experience possible.",
+    value: "item-subscription",
+  },
+  {
     question: "What is ClassClarus?",
     answer: "ClassClarus is a classroom gamification platform that helps teachers motivate students through points, behaviors, and rewards. Teachers can award points for positive behaviors, let students redeem points for rewards, and track progress in real-time. It's designed to make classroom management engaging and fun for both teachers and students.",
     value: "item-1",
