@@ -140,7 +140,7 @@ export default function ThreeDPrintingInstructionsPage() {
                         className="text-primary hover:underline inline-flex items-center gap-1 font-semibold"
                       >
                         MakerWorld
-                        <ExternalLink className="h-3 w-3" />
+                        <ExternalLink className="size-4" />
                       </Link>{" "}
                       to search for 3D models.
                     </li>
@@ -157,7 +157,7 @@ export default function ThreeDPrintingInstructionsPage() {
                     >
                       <Search className="h-4 w-4" />
                       Visit MakerWorld
-                      <ExternalLink className="h-4 w-4" />
+                      <ExternalLink className="size-4" />
                     </Link>
                   </div>
 
@@ -250,7 +250,8 @@ export default function ThreeDPrintingInstructionsPage() {
                 <div className="md:w-1/2 flex-shrink-0">
                   <div className="rounded-lg border border-secondary overflow-hidden bg-secondary/20">
                     <Image
-                      src="/3d-printing/print-profile.jpg"
+                    src="/3d-printing/a1-mini-select.jpg"
+                      
                       alt="Print Profile card showing different printer options including A1 Mini"
                       width={1200}
                       height={600}
@@ -274,7 +275,7 @@ export default function ThreeDPrintingInstructionsPage() {
                     <Badge>Step 3</Badge>
                   </div>
                   <CardTitle className="text-2xl">
-                    Check Duration & Filament
+                    Check Duration, Filament, and Nozzle Size
                   </CardTitle>
                   <CardDescription className="text-base mt-1">
                     Find out how long it takes and how much material is needed
@@ -290,17 +291,24 @@ export default function ThreeDPrintingInstructionsPage() {
                     <li>
                       Look through the different models to find one that you like.
                     </li>
-                    <li>Hover your mouse over one to see its details.</li>
+                    <li>Hover your mouse over one or click it to see its details. (The red circle in the image)</li>
                     <li>
                       Find the <strong className="text-foreground">duration</strong>{" "}
-                      (how long it takes to print).
+                      (how long it takes to print). E.G. 1.6 h (The blue circle in the image)
+                    </li>
+                    <li>
+                      Find the{" "}
+                      <strong className="text-foreground">
+                        nozzle size
+                      </strong>{" "}
+                      (in mm). E.G. 0.4 mm. I can only print with 0.4 mm nozzle size. (The magenta (pink) circle in the image)
                     </li>
                     <li>
                       Find the{" "}
                       <strong className="text-foreground">
                         amount of filament
                       </strong>{" "}
-                      (in grams).
+                      (in grams). E.G. 36 g (The yellow circle in the image)
                     </li>
                     <li>
                       Remember the duration and the filament amount for the next
@@ -312,7 +320,7 @@ export default function ThreeDPrintingInstructionsPage() {
                     <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                     <p className="text-sm text-muted-foreground">
                       <strong className="text-foreground">Pro tip:</strong> Write
-                      down the duration and filament amount so you don&apos;t
+                      down the duration, nozzle size, and filament amount so you don&apos;t
                       forget!
                     </p>
                   </div>
@@ -321,7 +329,7 @@ export default function ThreeDPrintingInstructionsPage() {
                 <div className="md:w-1/2 flex-shrink-0">
                   <div className="rounded-lg border border-secondary overflow-hidden bg-secondary/20">
                     <Image
-                      src="/3d-printing/model-page.jpg"
+                      src="/3d-printing/print-profile.jpg"
                       alt="Model page showing duration and filament amount details"
                       width={1200}
                       height={600}
@@ -353,13 +361,16 @@ export default function ThreeDPrintingInstructionsPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <ol className="list-decimal list-inside space-y-3 text-muted-foreground">
-                <li>Go to this website (you&apos;re already here!).</li>
                 <li>
-                  Scroll to the bottom to find the{" "}
+                  Scroll a little bit down to find the{" "}
                   <strong className="text-foreground">
                     3D Printing Cost Calculator
                   </strong>{" "}
                   card.
+                </li>
+                <li>
+                  Select the <strong className="text-foreground">nozzle size</strong> from the dropdown menu.
+                  
                 </li>
                 <li>
                   Input the <strong className="text-foreground">duration</strong>{" "}
@@ -372,10 +383,7 @@ export default function ThreeDPrintingInstructionsPage() {
                   </strong>{" "}
                   in grams.
                 </li>
-                <li>
-                  Click the <strong className="text-foreground">Calculate</strong>{" "}
-                  button or hit the Enter key.
-                </li>
+                <li>Click the <strong className="text-foreground">Calculate</strong> button or hit the Enter key.</li>
                 <li>See the cost in points!</li>
               </ol>
 
@@ -432,7 +440,7 @@ export default function ThreeDPrintingInstructionsPage() {
                     className="text-primary hover:underline inline-flex items-center gap-1 font-semibold"
                   >
                     Google Form
-                    <ExternalLink className="h-3 w-3" />
+                    <ExternalLink className="size-4" />
                   </Link>{" "}
                   with your information and print details.
                 </li>
@@ -451,7 +459,7 @@ export default function ThreeDPrintingInstructionsPage() {
                 >
                   <FileText className="h-4 w-4" />
                   Open Google Form
-                  <ExternalLink className="h-4 w-4" />
+                  <ExternalLink className="size-4" />
                 </Link>
               </div>
 

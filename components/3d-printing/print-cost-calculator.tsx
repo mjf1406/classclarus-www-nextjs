@@ -13,6 +13,13 @@ import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const FILAMENT_PRICE_PER_KG = 31000; // KRW
 const MATERIAL_EFFICIENCY_FACTOR = 1.1; // percent - Accounts for filament waste
@@ -21,14 +28,17 @@ const PRINT_TIME_COST_PER_HOUR = 300; // KRW
 const PrintCostCalculator = () => {
   const [printingTime, setPrintingTime] = useState<string>("");
   const [filamentWeight, setFilamentWeight] = useState<string>("");
+  const [nozzleSize, setNozzleSize] = useState<string>("0.2");
   const [result, setResult] = useState<number | null>(null);
   const [timeError, setTimeError] = useState<string>("");
   const [weightError, setWeightError] = useState<string>("");
+  const [nozzleError, setNozzleError] = useState<string>("");
 
   const validateInputs = () => {
     let isValid = true;
     setTimeError("");
     setWeightError("");
+    setNozzleError("");
     const time = parseFloat(printingTime);
     const weight = parseFloat(filamentWeight);
 
@@ -41,6 +51,12 @@ const PrintCostCalculator = () => {
     // Validate filament weight input
     if (filamentWeight.trim() === "" || isNaN(weight)) {
       setWeightError("Please enter a valid filament weight (in grams).");
+      isValid = false;
+    }
+
+    // Validate nozzle size - must be 0.4
+    if (nozzleSize !== "0.4") {
+      setNozzleError("Only 0.4mm nozzle size is currently supported.");
       isValid = false;
     }
 
@@ -81,15 +97,41 @@ const PrintCostCalculator = () => {
       </CardHeader>
       <CardContent className="space-y-4">
         {/* Always reserve space for the result */}
-        <div className="min-h-[2rem]">
+        <div className="min-h-[3.5rem]">
           {result !== null && (
             <div className="text-lg font-medium">
               This 3D model costs <strong className="text-primary">{result} points</strong>.
             </div>
           )}
+          {nozzleError && (
+            <Alert className="border-destructive/50 bg-destructive/10">
+              <AlertDescription className="flex items-center gap-2 text-sm text-destructive">
+                <AlertCircle className="h-4 w-4" /> {nozzleError}
+              </AlertDescription>
+            </Alert>
+          )}
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+            <label
+              htmlFor="nozzleSize"
+              className="block text-sm font-medium mb-2"
+            >
+              Nozzle Size (mm)
+            </label>
+            <Select value={nozzleSize} onValueChange={setNozzleSize}>
+              <SelectTrigger id="nozzleSize" className="bg-background">
+                <SelectValue placeholder="Select nozzle size" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="0.2">0.2</SelectItem>
+                <SelectItem value="0.4">0.4</SelectItem>
+                <SelectItem value="0.6">0.6</SelectItem>
+                <SelectItem value="0.8">0.8</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
           <div>
             <label
               htmlFor="printingTime"
@@ -138,7 +180,6 @@ const PrintCostCalculator = () => {
               </Alert>
             )}
           </div>
-
           <Button type="submit" className="w-full">
             Calculate
           </Button>
