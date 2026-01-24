@@ -3,6 +3,7 @@
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 export const FooterSection = () => {
     return (
@@ -117,11 +118,12 @@ export const FooterSection = () => {
                         <h3 className="font-bold text-lg">Resources</h3>
                         <div>
                             <Link
-                                href="https://classclarus.com"
+                                href="https://app.classclarus.com"
                                 target="_blank"
-                                className="opacity-60 hover:opacity-100"
+                                className="opacity-60 hover:opacity-100 flex items-center gap-1"
                             >
                                 Launch App
+                                <ExternalLink className="size-4" />
                             </Link>
                         </div>
 

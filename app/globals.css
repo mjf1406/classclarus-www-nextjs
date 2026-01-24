@@ -4,7 +4,6 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-gutter: stable;
 }
 
 /* *=========== ClassClarus Teal Theme =========== */
@@ -85,5 +84,29 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+    scrollbar-gutter: stable;
+  }
+  
+  /* Preserve scrollbar gutter when Radix UI locks body scroll */
+  /* Calculate scrollbar width and preserve it when overflow is hidden */
+  /* This uses a CSS variable approach that works even when scrollbar is hidden */
+  :root {
+    --scrollbar-width: 0px;
+  }
+  
+  /* When body has overflow: hidden (added by Radix), preserve the gutter space */
+  /* Use a fixed value that matches typical scrollbar widths (15-17px on most browsers) */
+  body[style*="overflow: hidden"] {
+    padding-right: 17px;
+  }
+  
+  /* Also handle html element in case Radix locks scroll there */
+  html[style*="overflow: hidden"] {
+    padding-right: 17px;
+  }
+  
+  /* Alternative: Use :has() selector to detect Radix portals */
+  html:has([data-radix-portal]) body {
+    padding-right: 17px;
   }
 }
